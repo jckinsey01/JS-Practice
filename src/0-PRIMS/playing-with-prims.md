@@ -16,28 +16,43 @@ In your group, create a suite of the following primitives about a topic of your 
 - 1 array for the Numbers
 - 1 array of 5 objects that combines the Strings and Numbers into 1
 
-```javascript
+```js
 /**
  * Convert and declare here!
 **/
 // 5 Strings with `let`
-
+let macchiato = "Macchiato"
+let oatMilkLatte = "Oat Milk Latte"
+let chaiLatte = "Chai Latte"
+let americano = "Americano"
+let matchaLatte = "Matcha Latte"
 
 // 5 Numbers with `const`
-
+const macchiatoPrice = 4.50
+const oatMilkLattePrice = 6.50
+const chaiLattePrice = 5.00
+const americanoPrice = 2.00
+const matchaLattePrice = 9.00
 
 // 1 array for the Strings with the variable names
-
+let menuItems = [macchiato, oatMilkLatte, chaiLatte, americano, matchaLatte]
 
 // 1 array for the Numbers with the variable names
-
+let menuPrices= [macchiatoPrice, oatMilkLattePrice, chaiLattePrice, americanoPrice, matchaLattePrice]
 
 /**
  * 1 array of 5 objects that combines the Strings
  * and Numbers into 1 object as 2 properties of
  * each object
 **/
-
+let fullMenu = [
+  {item: macchiato, price: macchiatoPrice},
+  {item: oatMilkLatte, price: oatMilkLattePrice},
+  {item: chaiLatte, price: chaiLattePrice},
+  {item: americano, price:americanoPrice},
+  {item: matchaLatte, price: matchaLattePrice},
+]
+console.log(fullMenu)
 
 ```
 
@@ -47,22 +62,23 @@ In your group, create a suite of the following primitives about a topic of your 
 
 Concatenate them with `+` operator.
 
-```javascript
-// Convert and play
+```js
+americano+matchaLatte
 ```
 
 Access position of individual characters at index.
 
 ```javascript
-// Convert and play
+matchaLatte[]]
 ```
 
 ### Numbers
 
 Use arithmetic operators to yield computations: `+`, `-`, `*`, `/`, etc.
 
-```javascript
-// Convert and play
+```js
+
+americanoPrice + matchaLattePrice
 ```
 
 ## 3. Finding Built-In Docs Arrays & Objects in the Web Console
@@ -71,16 +87,19 @@ Use arithmetic operators to yield computations: `+`, `-`, `*`, `/`, etc.
 
 Log your simple Array of Strings to the console, so we can check out what built-in methods we can use for Arrays.
 
-```javascript
-// Convert and play
+```js
+fullMenu.push({item:"Cold Brew", price: 5.00})
+console.log(fullMenu)
+
 ```
 
 Log your Array of Objects to the console, so we can check out what built-in methods we can use for Objects.
 
 ### Array of Objects
 
-```javascript
+```js
 // Convert and play
+console.log(fullMenu[3].price)
 ```
 
 ## 4. (Block) Scope & Conditional Statements
