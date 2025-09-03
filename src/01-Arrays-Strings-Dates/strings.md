@@ -49,7 +49,7 @@ const paigeBueckersDoc = await wtf.fetch('Paige Bueckers')
 ```
 
 ```js
-const pbText = paigeBueckersDoc.plaintext()
+const pbText = FileAttatchment("./../data/pb.text").text()
 ```
 
 ```js
@@ -60,22 +60,28 @@ pbText
 
 Let's have fun and use the .replaceAll() method within this String/Wikipedia article:
 
-```javascript
-pbText.replaceAll("", "")
+```js
+pbText.replaceAll("basketball", "egg").replaceAll("Basketball", "Egg")
 ```
 
 ## 3. Splitting strings
 
 How would we split this string into something that we can parse and loop through more methodically?
 
-```javascript
+```js
 // Convert and code here
+const pbArraypbText.split(" ")
 ```
 
 ## 4. Fun with loops, conditional statements, and `.includes()`
 
 Ok, let's start doing some easy counting of terms. There are more sophisticated and necessary steps to take to process/clean the data. But, I just want you to get an idea about what it's like to work with textual data.
 
-```javascript
+```js
 // Convert and code here
+for (let word of pbArray){
+  if (word == "basketball") {
+    console.log[word]
+  }
+}
 ```
