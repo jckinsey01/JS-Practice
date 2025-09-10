@@ -1,4 +1,4 @@
-# Gettin' Funcy with Strings
+# Gettin' Funcky with Strings
 
 Here's what you should understand by the end of the midterm. You should know ...
 
@@ -16,7 +16,10 @@ Use Observable's `FileAttachment()` to attach the `pb.txt` file with the `.text(
 
 1. What data type does your attached `pb.txt` file become?
 2. How many characters are in the `pb.txt` file? HINT: Use the `.length` method.
-
+```js
+const pb = FileAttachment("./../data/pb.text").text;
+console.log(pb.length);
+```
 ## Counting Matched Strings
 
 **Data to use**: `pb.txt`
@@ -27,6 +30,36 @@ Write a function that will:
 2. Use an input String, e.g., `"basketball"`, to match against Strings in the split String; and
 3. Return the total amount of matches as Number.
 
+```js
+const countStringMatches = (stringData, matchString) => {
+  // split the string
+let splitString = stringData.split(" ")
+// assign count var
+let count = 0
+// assign empty matches array
+let matchesArray = []
+//
+for (const s of splitString) {
+ if (s == matchString) {
+console.log(s)
+matchesArray.push(s)
+count += 1
+ }
+}
+// return our count
+return count
+}
+```
+
+```js
+let splitstring = pb.split(" ")
+let count = 0
+for (const s of splitString) {
+  if (s == "baskettball")
+}
+// let stringCount = splitAndCountString(pb, "basketball")
+// console.log()
+```
 ## Set of Match Info
 
 Iterate on the previous function by writing a new function that returns a single object with the following properties:
@@ -39,3 +72,24 @@ Iterate on the previous function by writing a new function that returns a single
       ```javascript
       [ "top basketball award", "womens basketball player", ... ]
       ```
+```js
+const countStringMatches = (stringData, matchString) => {
+  // split the string
+let splitString = stringData.split(" ")
+// assign count var
+let count = 0
+let matchesArray []
+for (const s of splitString) {
+ if (s == matchString) {
+matchesArray.push(s)
+count += 1
+ }
+}
+// return our count
+return {
+  keyword: matchString,
+  totalMatches: count,
+  matches; matchesArray,
+}
+}
+```
