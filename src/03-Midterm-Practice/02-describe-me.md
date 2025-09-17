@@ -148,3 +148,29 @@ let newKittenGroup = kittenGroup.map(
   }
 )
 ```
+## Practice with Functions
+<!-- command / -->
+```js
+// make a function that logs to console the name of each cat in the collection
+/**
+ * name of fucntion is "logNames"
+ * writeKittyProperty()
+ * goal: writes new list of specific properties
+ * @params
+ * 1. animalcollection: array of objects. 
+ * propName: string.used to access specific property in object
+**/
+const writeKittyProperty = (animalCollection, propName) => {
+  let newList = []
+  for (const animal of animalCollection) {
+    newList.push(animal[propName])
+}
+// "kitty collection" names the array in the console
+return newList
+}
+```
+
+```js
+let kittyNames = writeKittyProperty(kittenGroup,"name")
+console.log(kittyNames)
+```
